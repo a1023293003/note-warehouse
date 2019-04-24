@@ -21,8 +21,8 @@
 	window.onload = function() {
 		var url = window.location.href;
 		var index, src;
-		if ((index = url.indexOf("#"))) {
-			src = url.split("#")[1];
+		if ((index = url.indexOf("?")) != -1) {
+			src = url.split("?")[1].split("=")[1];
 			document.getElementById("content").setAttribute("src", src);
 		}
 	};
